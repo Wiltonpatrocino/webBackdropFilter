@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200&display=swap');
+
+
+
+:root{
+    --green: #7db430;
+    --blue: #046494;
+    --light-blue: #3a8692;
+    --sea: #658188;
+    --light-sea: #bccccf;
+}
+
+html{
+    font-size: 60.3%;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Anek Malayalam', sans-serif;   
+    background-image: url('https://th.bing.com/th/id/R.0b11371ad1296ba63fc463fd4149a5a3?rik=0GwHoH4xeDO4lA&pid=ImgRaw&r=0');
+    background-size: cover;
+
+    color: var(--light-sea);     
+}
+
+
+*, *:before, *:after {
+    box-sizing:inherit;
+}
+
+main{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(60rem, 48rem));
+    column-gap: 4rem;
+    row-gap: 2rem;
+    margin: 0 auto;
+    padding: 15rem 6rem;
+}
+
+main #box{
+    background-color: rgba(62, 107, 145, 0.5);
+    margin: 0 auto;
+    width: 25rem;
+    height: 25rem;
+    border: 1px solid rgb(203, 218, 203);
+    border-radius: 10%;
+}
+main section{
+    display: grid;
+    background-color: rgba(89, 74, 175, 0.2) ;
+    grid-template-columns: 2fr;
+    padding-bottom: 7rem;
+    padding: 3rem;
+    border-radius: 5rem;
+}
+main label{
+    line-height: 2rem;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+main section input[type="color"]{
+    margin: 0.6rem 0 1.4rem 0;
+    width: 10rem;
+    position: relative
+}
+main section input[type="range"]{
+    margin-bottom: -1.6rem;
+    width: 98%;
+    position:static;
+}
+
+main section input[type="color"]::after{
+    content: attr(value);
+    position: absolute;
+    display: block;
+    width: 7rem;
+    top: 0;
+    left: 8rem;
+    background: var(--sea);
+    padding: 0.5rem;
+    border-radius: .2rem;
+}
+
+select{
+    margin-top: 1rem;
+    width: 84%;
+    background-color: var(--light-sea);
+    padding: .2rem;
+    line-height: 2rem;
+}
+main section input[type="range"]::after{
+    content: attr(value);
+    position: absolute;
+    display:grid;
+    cursor: pointer;
+    width: 5rem;
+    top: -0.4rem;
+    left: 103%;
+    color: var(--light-sea);
+    background-color: var(--blue);
+    padding: 1rem;
+    border-radius: .4rem;
+    text-align: center;
+    -webkit-appearance: none;
+}
+main section span{
+    visibility: hidden;
+    position: relative;
+    width: 5.2rem;
+    top: -0.6rem;
+    left: 86%;
+    color: var(--light-sea);
+    background-color: var(--blue);
+    padding: 0.5rem;
+    border-radius: .3rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+main section span::before{
+    content: "";
+    position:relative;
+    top: 0.7rem;
+    left: -1.4rem;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent var(--blue) transparent transparent;
+}
+main pre{
+    display: block;
+    position:static;
+    color: rgb(29, 15, 94);
+    background-color: var(--sea);
+    border-radius: 2rem;
+    padding: 2rem 0 2rem 5rem;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.8rem;
+    height: 15rem;
+    margin-top: 3rem;
+}
+
+
+main pre input{
+    position: absolute;
+    bottom: -1.4rem;
+    right: 2rem;
+    background-color: var(--light-sea);
+    padding: 0.4rem;
+    width: 10rem;
+    border-radius: .4rem;
+    font-weight: bold;
+    visibility: hidden;
+    border: 1px solid var(--light-sea);
+}
